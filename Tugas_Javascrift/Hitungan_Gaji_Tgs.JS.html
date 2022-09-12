@@ -1,0 +1,85 @@
+
+<script language="javascript">
+    //ubah data sesuai variabel
+    var pegawai = "Ridwan";
+    var jabatan = "Assistant Manager";
+    var status  = "Menikah";
+   
+
+    //pengelompokkan rumus looping bersarang (if else)
+    if (jabatan == "Manager") {
+        gaji = 15000000;
+    } else if (jabatan == "Assistant Manager") {
+        gaji = 10000000;
+    } else if (jabatan == "Staff") {
+        gaji = 5000000;
+    } else
+        gaji = 0;
+
+    let tjgn = 0.15 * gaji;
+    let bpjs = 0.1 * gaji;
+
+//boolean 
+tjgkeluarga = (status == 'Menikah') ? 0.2 * gaji : 0;
+total = gaji + tjgn + bpjs + tjgkeluarga;
+
+
+//output dengan penjabaran tabel
+document.write( 
+   
+    '<table align="center" border="" cellpadding="4" cellspacing="2" width="80%" padding="20px">' + 
+        '<thead>' + 
+            '<tr border="1">' +
+                '<th bgcolor="aqua" colspan="6">Hitung Gaji Pegawai</th>' +
+               
+            '</tr>' +
+        '</thead>' +
+        '<tbody>' + 
+            
+            '<tr>' + 
+                '<td align="center" bgcolor="Silver"> Nama Pegawai </td>' +
+                '<td align="center" bgcolor="Silver"> Jabatan </td>' +
+                '<td align="center" bgcolor="Silver"> Status </td>' +
+               
+            '</tr>' + 
+            
+            '<tr>' + 
+                '<td  align="center" >' + pegawai +  '</td>' +
+                '<td  align="center" >' + jabatan +  '</td>' +
+                '<td  align="center" >' + status +  '</td>' +
+               
+            '</tr>' +  
+
+            '<tr>' + 
+               
+                '<td align="center"  bgcolor="Silver" > Gaji </td>' +
+                '<td align="center"  bgcolor="Silver"> Tunjangan </td>' +
+                '<td align="center"  bgcolor="Silver"> BPJS </td>' +
+               
+            '</tr>' + 
+
+
+            '<tr>' + 
+              
+                '<td align="center">' + gaji +  '</td>' +
+                '<td align="center">' + tjgn +  '</td>' +
+                '<td align="center">' + bpjs +  '</td>' +
+            '</tr>' +  
+            
+            
+        '</tbody>' +
+
+        '<tfoot>' + 
+           
+            '<tr>' +
+                '<td align="center" bgcolor="Silver"> Total </td>' +
+                '<th colspan="5" >' + total + '</th>' +
+            '</tr>' +
+
+        '</tfoot>' +
+    '</table>'
+
+);
+
+
+</script>
