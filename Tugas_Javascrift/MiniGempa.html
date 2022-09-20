@@ -48,6 +48,7 @@
                     </thead>
                     <tbody>
                         <script language="javascript">
+                          //fungsi variabel constructor dengan penjabaran atribut
                             class Gempa{
                                 
                                 constructor(no, lokasi, skala, keterangan){
@@ -59,6 +60,7 @@
 
                                 }
 
+                              //loop untuk menjabarkan detail keterangan
                             getKeterangan(){
                                 // for(this.skala = 1; this.skala < 10; this.skala++){
                                     if (this.skala > 1 && this.skala <= 2){
@@ -79,6 +81,7 @@
                             // }
 
     
+                              //cetak data pada objek
                             cetak(){
                                 document.write(
                                 `<tr>
@@ -94,7 +97,8 @@
 
                     }
 
-
+                          
+                  //inisialisasi object untuk cetak data
                             obj1 = new Gempa('1', 'Aceh', 6.4);
                             obj1.cetak();
 
